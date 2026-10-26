@@ -8,9 +8,11 @@ The Client, Artemis Financial, was looking to create a website that allowed for 
 I think the best thing I did was trying to understand the purposes behind why each piece of software was needed in the first place. Having less dependencies on software you don't control makes your code more secure since there are less things you need to keep track of in your own code base. Code needs to be secure because you never know the small bugs that can creep in. We can only imagine so much, but people are creative. Nearly every system has cracks, so adding security like SHA-256 to confirm that messages haven't been changed, RSA keys to confirm that you are who you say you are and that your messages are coming from you, and secret symmetric keys to create virtually uncrackable messages create layers of security that make it difficult for bad actors to imitate your server.
 
 - Which part of the vulnerability assessment was challenging or helpful to you?
+
 I found it difficult to confirm that the dependency report contained helpful information. Since this application was not built by me, and was not something I was actively working on, but was instead a project used for school, it was difficult to know what dependencies were really necessary. It's what led me to do research on what each section was meant to do. False Positives, or vulnerabilities that could be ignored were also difficult since my gut reaction was to try to remove vulnerabilities rather than ignore them. 
 
 - How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
+
 In my code, I used SHA-256 along with external confirmations (on the client side) to make sure that messages from the server were being sent correctly. I also would choose to set up regular update schedules to confirm that we are catching the vulnerabilities in the dependencies that are code actually depends on, the kind of dependencies that have a large effect on our code.
 
 - How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
